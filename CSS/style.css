@@ -1,0 +1,41 @@
+#title-big {
+    color: purple
+}
+
+.title-medium {
+    color: red
+}
+
+body {
+    color: green
+}
+
+
+table h4 {
+    color: black
+}
+
+h4 {
+    color: purple;
+}
+
+h4:hover {
+    color: red
+}
+a[href^="http"] {
+    color: red
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 200px
+}
+
+a:hover, a[href^="http"]:hover {
+    color: purple
+}
+
+tr:nth-child(2n){
+    background-color: gray;
+}
+

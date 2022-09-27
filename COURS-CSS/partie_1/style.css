@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "font-1";
+  src: url(./assets/Montserrat-Regular.ttf);
+}
+
+/* Utile pour débug */
+/* * {
+ border: 2px red solid;
+} */
+
+body {
+  font-family: "font-1", serif;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+body {
+  font-family: "font-1", serif;
+  background: url(./assets/bg.jpg) center/cover;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  color: rgb(240, 240, 240);
+  text-shadow: 3px 3px 0px #0000000e;
+  text-align: center;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.747);
+  width: 90%;
+  min-height: 500px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px 15px rgba(0, 0, 0, 0.205);
+}
+
+.positioning,
+.flexbox,
+.grid {
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.positioning {
+  position: relative;
+}
+h2 {
+  margin: 0;
+}
+
+/************************** Positioning ********************************/
+
+#circle {
+  height: 60px;
+  width: 60px;
+  background: skyblue;
+  padding: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 0 2px 12px 15px rgba(0, 0, 0, 0.027);
+  z-index: 5;
+}
+
+#rectangle {
+  height: 15px;
+  width: 100px;
+  background: slateblue;
+  padding: 20px;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+/****************************** Flexbox *************************************/
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  font-size: 0.7rem;
+  height: 160px;
+  width: 160px;
+  background: rgba(245, 245, 245, 0.363);
+  /* Les 3 éléments suivants sont très important lorsque l'on veut centrer verticalement.*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/******************************* Grid ***********************************/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 20px;
+}
+
+.img {
+  text-align: center;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "bt bt";
+}
+
+input,
+textarea {
+  margin: 5px;
+  height: 45px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: "font-1";
+}
+#firstname {
+  grid-area: i1;
+}
+
+#surname {
+  grid-area: i2;
+}
+
+textarea {
+  grid-area: ta;
+  resize: none;
+}
+
+input[type="submit"] {
+  grid-area: bt;
+  cursor: pointer;
+  background: rgba(166, 170, 170, 0.705);
+  transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+  background: darkblue;
+  color: white;
+}
+
+/************************ Responsive **************************************/
+
+@media screen and (max-width: 1000px) {
+  .grid-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "i1"
+      "i2"
+      "ta"
+      "bt";
+  }
+}

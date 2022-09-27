@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Le titre de la page  -->
+    <title>Cours HTML</title>
+    <!-- Icône de l'onglet -->
+    <link rel="shortcut icon" href="logo_html.png" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Google recommande un H1 par page. -->
+      <h1 id="title-big"><span>&#8486;</span> Texte - H1</h1>
+      <p>
+        Texte Basique, <em>Voici un texte en italique.</em>
+        <strong> Et un texte en gras.</strong>
+        <span
+          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
+          numquam rem autem tempore, in sint itaque harum qui rerum totam neque
+          quaerat exercitationem, amet id eos? Iusto fugit aliquid atque sit
+          provident esse eveniet, dignissimos sequi voluptas vel delectus
+          ratione blanditiis, explicabo eaque? Doloremque ipsum libero
+          accusantium iste saepe perferendis porro esse corporis, magni quo
+          soluta nihil dignissimos recusandae magnam sapiente autem id nemo
+          molestias. Eius in magnam facere culpa doloribus et eligendi
+          repudiandae deleniti, nemo fugiat asperiores reprehenderit ab corporis
+          esse autem dolorem, ut provident temporibus laboriosam. Unde, ut sunt.
+          Accusamus non, iure accusantium tempora aspernatur impedit fuga optio?
+        </span>
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
+        praesentium quam, beatae consequatur recusandae nesciunt cumque,
+        consequuntur totam fugiat nam eligendi rerum et, amet cupiditate
+        necessitatibus officia quod. Minus aliquid ullam ad, quia excepturi modi
+        nobis consectetur voluptates facere molestiae illo ducimus deserunt
+        cupiditate quibusdam asperiores vitae vel veritatis! Est distinctio
+        blanditiis aut cumque delectus molestiae, eveniet eos voluptates
+        explicabo error officia id ea eligendi adipisci incidunt similique quae
+        sapiente laudantium sed! Nesciunt ut voluptatum, necessitatibus deserunt
+        doloremque facilis incidunt. In pariatur non qui incidunt, obcaecati
+        enim, earum eveniet ab voluptas iusto corporis consequuntur quasi!
+        Quaerat ducimus obcaecati eos error!
+      </p>
+    </header>
+    <section>
+      <div>
+        <h2 class="title-medium">Photos - H2</h2>
+        <img src="wp1.jpg" height="200" alt="Une belle image." />
+      </div>
+      <div>
+        <h3>Listes - H3</h3>
+        <ul>
+          <li>UL = unordered List</li>
+          <li>UL = unordered List</li>
+          <li>UL = unordered List</li>
+        </ul>
+        <ol>
+          <li>OL = Ordered List</li>
+          <li>OL = Ordered List</li>
+          <li>OL = Ordered List</li>
+          <li>OL = Oreored List</li>
+        </ol>
+      </div>
+      <div>
+        <h4>Tableau - H4</h4>
+        <table border="1" width="50%">
+          <!-- Légende -->
+          <caption>
+            Un tableau
+          </caption>
+          <!-- En-tête -->
+          <thead>
+            <tr>
+              <th>Pays</th>
+              <th>Population</th>
+            </tr>
+          </thead>
+          <!-- Corps du tableau -->
+          <tbody>
+            <tr>
+              <td><h4>France</h4></td>
+              <td>66M</td>
+            </tr>
+            <tr>
+              <td>Allemagne</td>
+              <td>82M</td>
+            </tr>
+            <tr>
+              <td>Espagne</td>
+              <td>45M</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h5>Liens - H5</h5>
+        <a href="https://htmlcheatsheet.com/" target="_blank"
+          >HTML Cheat Sheet</a
+        >
+        <br />
+        <a
+          href="https://www.toptal.com/designers/htmlarrows/symbols/"
+          target="_blank"
+          >Icônes en HTML</a
+        >
+      </div>
+      <div>
+        <h6>Vidéos - H6</h6>
+        <video src="nature.mp4" height="150" autoplay loop muted></video>
+      </div>
+    </section>
+    <br />
+    <!-- Formulaire -->
+    <section>
+      <h2>Formulaire</h2>
+      <form action="/action.php" method="POST">
+        <label for="name">Nom :</label>
+        <input type="text" placeholder="Nom" name="" id="name" />
+        <br />
+
+        <label for="age">Age :</label>
+        <input type="number" id="age" min="0" max="99" step="1" value="18" />
+        <br />
+
+        <!-- Input Select -->
+        <select name="" id="gender">
+          <option selected value="homme">Homme</option>
+          <option value="femme">Femme</option>
+        </select>
+        <br />
+
+        <!-- Input Radio -->
+        <div>
+          <input type="radio" name="type" id="human" />
+          <label for="human">Humain</label>
+
+          <input type="radio" name="type" id="dog" checked />
+          <label for="dog">Chien</label>
+
+          <input type="radio" name="type" id="cat" />
+          <label for="cat">Chat</label>
+        </div>
+
+        <textarea
+          placeholder="Entre une information"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+        <br />
+
+        <!-- Input Checkbox -->
+        <label for="">
+          <input type="checkbox" name="" id="" />Acceptez les CGV.
+        </label>
+        <input type="submit" value="Valider" />
+      </form>
+    </section>
+    <br />
+    <!-- Mail et envoi de fichier -->
+    <footer>
+      <a href="mailto:otarinolive@gmail.com">Écrivez-moi !</a>
+      <br />
+
+      <a href="notice.txt" download="nom-du-fichier">Téléchargez la notice.</a>
+    </footer>
+  </body>
+</html>
